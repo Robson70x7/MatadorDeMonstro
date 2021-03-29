@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Matador de Mostro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <!-- Progresso -->
+        <div id="container">
+            <div id="wrapper-jogador">
+                <h2>Jogador</h2>
+                <div class="progress-bar">
+                    <div class="progress" 
+                    :class="corProgressoJ" :style="{width:widthJ}"></div>
+                    <span class="progress-info">{{ widthJ }}</span>
+                </div>
+            </div>
+            <div id="wrapper-monstro">
+                <h2>Monstro</h2>
+                <div class="progress-bar">
+                    <div class="progress"
+                    :class="corProgressoM" :style="{width:widthM}"></div>
+                    <span class="progress-info">{{ widthM }}</span>
+                </div>
+            </div>
+            <div v-show="resultado.exibir" 
+                class="resultado"
+                :class="corResultado">{{ resultado.msg }}</div>
+        </div>
+        <!-- Butoes -->
+        <div id="container">
+            <div class="group-button">
+                <template v-if="!novoJogo">
+                    <button type="button" class="btn-blue" 
+                        @click="start" 
+                        >Iniciar Novo Jogo</button>
+                </template>
+                <template v-else>
+                    <button type="button" class="btn-red" @click="atacar">Ataque</button>
+                    <button type="button" class="btn-orange" @click="atacarEspecial">Ataque Especial</button>
+                    <button type="button" class="btn-green" @click="curar">Curar</button>
+                    <button type="button" 
+                        @click="desistir" class="btn-default">Desistir</button>
+                </template>
+            </div>
+        </div>
+
+        <!-- Logs -->
+        <div id="container" class="d-column">
+            <template v-for="log in logs">
+                <div class="log" :class="{'log-red': !log.jogador, 'log-blue':log.jogador}">{{ log.msg.toUpperCase() }}</div>
+            </template>
+        </div>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

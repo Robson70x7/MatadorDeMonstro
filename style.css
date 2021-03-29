@@ -1,0 +1,122 @@
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+#container{
+    padding: 25px;
+    box-shadow: 1px 3px 5px 2px #ccc;
+    display: flex;
+    justify-content: space-around;
+    margin: 25px 0;
+    position: relative;
+}
+
+.d-column{
+    flex-direction: column;
+}
+
+#wrapper-jogador, #wrapper-monstro{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.text-red{
+    color: red;
+}
+.text-green{
+    color: green;
+}
+.resultado{
+    position: absolute; bottom: 15px; left: 45%;
+}
+
+.progress-bar{
+    width: 500px;
+    border: 1px solid #ccc;
+    height: 25px;
+    border-radius: 5px;
+}
+
+.progress-info{
+    margin-left: 50%;
+}
+.bg-green{
+    background-color: green !important;
+}
+
+.bg-red{
+    background-color: red !important;
+}
+
+.btn-red{
+    background-color: red !important;
+    color: #fff;
+    border-radius: 5px;
+    padding: 8px;
+    border-color: rgb(255, 75, 75);
+    cursor: pointer;
+}
+
+.log{
+    width: 100%; 
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    display: block;
+    margin: 5px 0;
+}
+
+
+
+.log-red{
+    background-color: rgb(247, 127, 127);
+    color:#fff;
+}
+
+.log-blue{
+    background-color: rgb(142, 141, 226);
+    color:#fff;
+}
+
+.btn-orange{
+    background-color: orange !important;
+    color: #fff;
+    border-radius: 5px;
+    padding: 8px;
+    border-color: rgb(255, 180, 42);
+    cursor: pointer;
+}
+
+.btn-green{
+    background-color: green !important;
+    color: #fff;
+    border-radius: 5px;
+    padding: 8px;
+    border-color: rgb(24, 133, 24);
+    cursor: pointer;
+}
+
+.btn-blue{
+    background-color: rgb(40, 50, 184) !important;
+    color: #fff;
+    border-radius: 5px;
+    padding: 8px;
+    border-color:  rgb(40, 50, 184);
+    cursor: pointer;
+}
+
+.btn-default{
+    border-radius: 5px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.progress{
+    height: 25px;
+}
+
+button{
+    margin:0 15px;
+}
